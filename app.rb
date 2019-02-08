@@ -30,19 +30,19 @@ class App < Sinatra::Base
     "#{@word1} #{@word2} #{@word3} #{@word4} #{@word5}"
   end
   
-  get '/:operation/:number1/:number2' do 
-    @number1 = params[:number1].to_i
-    @number2 = params[:number2].to_i
-    if params[:operation].to_s.downcase == 'add'
-      @operation = "+"
-    elsif params[:operation].to_s.downcase == 'subtract'
-      @operation = "-"
-    elsif params[:operation].to_s.downcase == 'multiply'
-      @operation = "*"
-    else 
-      @operation = "/"
-    end
-    "#{@number1 @operation @number2}"
-  end
+  # get '/:operation/:number1/:number2' do 
+  #   @number1 = params[:number1].to_i
+  #   @number2 = params[:number2].to_i
+  #   if params[:operation].to_s.downcase == 'add'
+  #     @operation = "+"
+  #   elsif params[:operation].to_s.downcase == 'subtract'
+  #     @operation = "-"
+  #   elsif params[:operation].to_s.downcase == 'multiply'
+  #     @operation = "*"
+  #   else 
+  #     @operation = "/"
+  #   end
+  #   "#{@number1 @operation @number2}"
+  # end
 
 end
