@@ -38,5 +38,11 @@ class App < Sinatra::Base
     elsif params[:operation].to_s.downcase == 'subtract'
       @operation = "-"
     elsif params[:operation].to_s.downcase == 'multiply'
+      @operation = "*"
+    else 
+      @operation = "/"
+    end
+    "#{@number1 @operation @number2}"
+  end
 
 end
